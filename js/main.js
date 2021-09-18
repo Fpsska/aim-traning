@@ -27,7 +27,12 @@ board.addEventListener("click", event => {
         getRandomCircle()
     }
 })
-
+board.addEventListener("mouseleave", () => {
+    board.style.borderColor = "red";
+})
+board.addEventListener("mouseover", () => {
+    board.style.borderColor = "#c0c0c0";
+})
 
 function startGame() {
     setInterval(decreaseTime, 1000)
